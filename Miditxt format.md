@@ -17,13 +17,13 @@ Overall structure
 Notes, markings, strings, hex
 ------------------------------
 
-	### Notes
+	### Notes ###
 
 		Notes are written as their corresponding letter, optionally followed by a '#' or 'b' if the note is sharp or flat, followed by the octave (ranging from -1..9) written as a typical number would be. 
 
 		E.g. C4 Bb5 F#3
 
-	### Markings
+	### Markings ###
 
 	Markings are used to indicate when an event occurs
 
@@ -39,7 +39,7 @@ Notes, markings, strings, hex
 	
 	@mm.bb.ss(offset):mm.bb.ss(offset)
 
-	### Strings
+	### Strings ###
 
 	Strings are sequences of characters between two quotes "". Line breaks (\n), quotes (\") and backslashes (\\) should be escaped as written previously
 
@@ -64,19 +64,19 @@ Events
 	
 	MetaChannel <0..15> <marking>
 	EndTrack <marking>
-	KeySig <note> <major|minor>
+	KeySig <note> <major|minor> <marking>
 	TimeSig <1..15> <pow of 2> <marking>
-	Sequence <0..127>
-	Name <string>
-	Text <string>
-	Instrument <string>
-	Copyright <string>
-	Lyric <string>
-	Cue <string>
-	Marker <string>
-	SMTPEOffset <0..127>h<0..127>m<0..127>s(<0..127>.<00..99>)
+	Sequence <0..127> <marking>
+	Name <string> <marking>
+	Text <string> <marking>
+	Instrument <string> <marking>
+	Copyright <string> <marking>
+	Lyric <string> <marking>
+	Cue <string> <marking>
+	Marker <string> <marking>
+	SMTPEOffset <0..127>h<0..127>m<0..127>s(<0..127>.<00..99>) <marking>
 	
-	SYSEX <hex> <timestamp>
-	SYSEX_ESC <hex> <timestamp>
-	SYSEX_META <hex> <timestamp>
+	SYSEX <hex> <marking> 
+	SYSEX_ESC <hex> <marking>
+	SYSEX_META <hex> <marking>
 
